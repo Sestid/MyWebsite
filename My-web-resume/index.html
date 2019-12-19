@@ -1,0 +1,656 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+<!-- Basic Page Needs
+================================================== -->
+<title>Home</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Mobile Specific Metas 
+================================================== -->
+<meta content="width=device-width,initial-scale=1" name="viewport">
+
+<!-- Favicons
+================================================== -->
+<link rel="shortcut icon" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+<!--fonts
+====================================================-->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700%7cOswald:400,700" rel="stylesheet">
+<!--stylesheets
+====================================================-->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">  
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/simpletextrotator.css"> 
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--> 
+<script src="js/jquery.min.js"></script> <!-- JQUERY -->
+</head>
+<body>
+
+<!--FRONT PAGE/ SPLASH SCREEN SECTION-->
+
+<div class="loading-screen"></div>
+
+<div id="frontpage"> 
+	<div class="shadow-img"></div> 
+	<img src="images/front-image.jpg" class="front-img img-responsive" alt ="Front-image"><!--IMAGE FOR FRONT SCREEN-->
+	<h1 class="my-name">史春雨<span class="invert">Sestid</span></h1><!--PROFILE NAME-->
+	<h3 class="invert" style="margin-top: -10px; margin-bottom: 10px;">Web <span class="rotate">前端实习, 前端开发, 网页设计</span></h3> <!--SUBTITLE IN PROFILE-->
+	<div class="frontclick"><img src="images/click.png" alt="" class="img-responsive"><span class="pulse"></span></div>
+</div>
+<!--FRONT PAGE/ SPLASH SCREEN SECTION ENDS-->
+<!--container-->
+<div class="container">
+	<div id="content" class="row hidden">
+		<div class="col-sm-4">
+			<!--namecard-->
+			<div id="namecard" class="namecard">
+				<div class="shadow-img"></div>
+				<h1 class="maintitle">史春雨 <span class="invert">Sestid</span></h1><!--PROFILE NAME-->
+				<h3 class="invert sub-maintitle">Web 
+					<span class="rotate">前端实习, 前端开发, 网页设计</span><!--SUBTITLE AFTET NAME-->
+				</h3>
+				<img id="profile-img" class="profile-img transparent" src="images/person.jpg" alt="profile-image"><!--PROFILE IMAGE-->
+			</div><!--/#namecard-->
+			<!--menu-->
+			<div id="menu-container">
+				<!--PAGE MENU-->
+				<ul class="nav-menu no-padding">
+					<li class="nav-btn selected" title="Home" data-page="home">
+						<div class="hover-background"></div>
+						<span>我的主页</span><i class="fa fa-user fa-fw"></i>
+					</li>
+					<li class="nav-btn" id="resume-btn" title="Resume"  data-page="resume">
+						<div class="hover-background"></div>
+						<span>我的简历</span><i class="fa fa-file-text fa-fw"></i>
+					</li>
+				   <li class="nav-btn folio-btn" data-filter="*" title="Portfolio" data-page="portfolio">
+						<div class="hover-background"></div>
+						<span>我的项目</span><i class="fa fa-suitcase fa-fw"></i>
+					</li>
+					<li class="nav-btn" title="Contact" id="contact-link" data-page="contact">
+						<div class="hover-background"></div>
+						<span>联系方式</span><i class="fa fa-paper-plane fa-fw"></i>
+					</li>
+				</ul><!--/.nav-menu __PAGE MENU ENDS-->
+
+				<!--SOCIAL NAV MENU-->
+				<div class="social-menu-container">
+					<ul class="social-menu no-padding">                     
+						<li><a target="_blank" href="https://github.com/xiaola66"><i class="fa fa-github"></i></a></li>
+						<li><a class="csdn" target="_blank" href="https://blog.csdn.net/Sestid"><img src="./images/csdn.png" /></a></li>
+						<li><a id="email" href=""><i class="fa fa-envelope"></i></a></li>
+						<li><a id="qq" href=""><i class="fa fa-qq"></i></a></li>
+						<li><a id="weixin" href=""><i class="fa fa-weixin"></i></a></li>					
+					</ul>
+				</div><!--/.social-menu-container-->
+			</div><!--#menu-container-->
+		</div>
+		<div class="col-sm-8 page-segment">
+			<ul class="page-container no-padding">
+				<!--HOME/PROFILE PAGE-->
+				<li id="home" class="selected">
+					<div class="title-container hidden">
+						<div class="shadow-img"></div> 
+						<h2 class="rotate-out">欢迎来到<span class="invert">我的个人资料</span></h2><!--HOME TITLE-->                          
+					</div>
+					<div class="description hidden">
+						<div class="watermark-home"></div> 
+
+						<div class="fade-text transparent">
+							<!--DESCRIPTION ON HOME-->
+							<div class="strong-text">您好！ 我叫 <span>史春雨</span></div>
+							<div class="strong-text">，也可以叫我 <span>Sestid</span></div>
+							<div class="focus-text"><span>Web 前端开发 & </span><span>网页设计</span></div>
+							<p class="large-paragraph">热爱编程、热爱前端技术、有高度的技术敏感度、广阔的技术视野；能快速适应环境快速成长；
+								具有优秀的思维、沟通和学习能力，热爱团队工作，善于与人沟通，能够感受前卫文化、科技潮流带来的乐趣，
+								同时对创意有着自我的分析和见解；
+								性格外向，阳光开朗，吃苦耐劳，心思细腻，业务逻辑强。</p>         
+							<!--DESCRIPTION ON HOME ENDS-->
+						</div>
+
+						<!--ALL PERSONAL DETAILS-->
+						<h3 class="personal-info-title title">个人信息</h3>
+						<ul class="personal-info">
+							<li class="rotate-out rotated"><label>名字</label><span>史春雨</span></li> 
+							<li class="rotate-out rotated"><label>出生年月</label><span>1997-04</span></li> 
+							<li class="rotate-out rotated"><label>籍贯</label><span>吉林长春</span></li>                      
+							<li class="rotate-out rotated"><label>现居</label><span>北京市昌平区</span></li>
+							<li class="rotate-out rotated"><label>电话</label><span>15526548879</span></li>  
+						</ul><!--/ul.personal-info-->
+					</div>
+				</li><!--/#home-->
+
+				<!--RESUME PAGE-->
+				<li id="resume" class="hidden">
+					<div class="title-container">
+						<div class="shadow-img"></div>
+						<h2 class="rotate-out rotated"><span class="invert">欢迎来到 </span> 我的简历</h2> <!--RESUME TITLE-->
+					</div>
+					<div class="description">
+
+						<div class='tabs tabs_animate'>
+							<!--RESUME TAB LISTS-->
+							<ul class='horizontal no-padding'>
+								<li><a href="#tab-1" class="icon-bg icon-skills"><div>个人技能</div></a></li>
+								<li><a href="#tab-2" class="icon-bg icon-education"><div>教育背景</div></a></li>
+								<li><a href="#tab-3" class="icon-bg icon-employment"><div>工作经历</div></a></li>
+							</ul><!--RESUME TAB LISTS ENDS-->
+
+							<!--RESUME FIRST TAB/SKILL TAB DETAILS-->
+							<div id='tab-1'>
+								<h3 class="title">我的技能</h3><!--SKILLS WITH BAR DISPLAY-->
+								<ul class="skills-list no-padding">
+									<li>
+										<div class="fw-mid">Html（5）、Css（3）</div>
+										<span>包括：媒体查询media、弹性布局（Flex）、网格布局（Grid）、transform、animation等；</span>
+									</li>
+									<li>
+										<div class="fw-mid">JavaScript、jQuery、Es6、EChart.js</div>
+										<span>熟练掌握原生Js、大量的jQuery代码编写经验、了解es6新语法；</span>
+									</li>
+									<li>
+										<div class="fw-mid">Bootstrap布局、jQueryUI、Webpack打包工具、Swiper等一些移动端插件</div>
+									</li>
+									<li>
+										<div class="fw-mid">掌握React框架、react native、react-router</div>
+									</li>
+									<li>
+										<div class="fw-mid">AntdDesignPro、AntdDesign、AntdDesignMobile、Material-UI</div>
+									</li>
+									<li>
+										<div class="fw-mid">了解TypeScript、Sass、Less</div>
+									</li>
+									<li>
+										<div class="fw-mid">Wxml、Wxss微信小程序开发</div>
+										<span><a target="_blank" href="https://github.com/xiaola66/applet-of-WeChat-">做过贝壳找房的页面（点击查看）</a></span>
+									</li>
+									<li>
+										<div class="fw-mid">熟悉Ajax、Axios</div>
+										<span>使用Ajax做过前后端交互的项目；</span>
+									</li>
+									<li>
+										<div class="fw-mid">熟练使用Git，有自己的github库；</div>
+									</li>
+									<li>
+										<div class="fw-mid">Nginx、MongoDB</div>
+										<span>会配置Nginx、会使用Robo3T或Studio3T连接MongoDB</span>
+									</li>
+									
+								</ul><!--SKILLS WITH BAR DISPLAY ENDS-->
+
+							
+							</div><!--RESUME FIRST TAB/SKILL TAB DETAILS ENDS-->
+							
+							<!--RESUME SECOND TAB/EDUCATION TAB DETAILS-->
+							<div id='tab-2'>
+								<h3 class="title">教育背景</h3>
+								<ul class="education-class">
+									<li>
+										<!--EDUCATION LIST ITEM-->
+										<h4 class="title">学校<i class="fa fa-sort-desc pull-right"></i></h4>
+										<div class="list-content">
+											<h5 class="title">北华大学 <span class="list-year">(2016 - 2020)</span></h5>
+											<p>吉林省人民政府设立的全日制普通高等学校，坐落在吉林省吉林市，是吉林省省属综合性重点大学；截至2019年3月，学校有东、南、北三个校区和一所附属医院，占地面积293万平方米。</p><!--EDUCATION LIST DETAILS-->
+										</div>
+									</li>
+									<li>
+										<!--EDUCATION LIST ITEM-->
+										<h4 class="title">学院<i class="fa fa-sort-desc pull-right"></i></h4>
+										<div class="list-content current">
+											<h5 class="title">计算机科学技术学院</h5>
+											<p>设有计算机科学与技术、计算机应用技术、网络工程、软件工程、数字媒体、教育技术6个本科专业和计算机应用、程序设计、软件测试3个高职专业。计算机应用技术为硕士学位授予点。</p><!--EDUCATION LIST DETAILS-->
+										</div>
+									</li>
+									<li>
+										<!--EDUCATION LIST ITEM-->
+										<h4 class="title">专业<i class="fa fa-sort-desc pull-right"></i></h4>
+										<div class="list-content">
+											<h5 class="title">软件工程</h5>
+											<p><strong>修业年限:</strong>4年 <strong>授予学位:</strong>工学学士
+												<strong>主干课程:</strong>
+												程序设计基础、面向对象程序设计、数据结构、计算机组成原理、操作系统原理、计算机网络原理、数据库原理、软件工程导论、系统建模技术、人机交互、高级编程技术。</p><!--EDUCATION LIST DETAILS-->
+										</div>
+									</li>
+									<li>
+										<!--EDUCATION LIST ITEM-->
+										<h4 class="title">学历学位<i class="fa fa-sort-desc pull-right"></i></h4>
+										<div class="list-content">
+											<h5 class="title">本科</h5>
+											<p><strong>就业方向:</strong>
+												在软件企业从事软件开发和项目管理工作，也可在企事业单位从事计算机应用系统的开发与维护工作。</p><!--EDUCATION LIST DETAILS-->
+										</div>
+									</li>
+								</ul>
+							</div><!--RESUME SECOND TAB/EDUCATION TAB DETAILS ENDS-->
+							<!--RESUME THIRD TAB/EMPLYMENT TAB DETAILS ENDS-->
+							<div id='tab-3'>
+								<h3 class="title">工作经历</h3>
+								<ul class="employment-class tab-cont">
+									<li>
+										<!--EMPLOYMENT INDIVIDUAL LIST-->
+										<h4>公司名称：智协慧同（北京）科技有限公司<span class="year">在职时间：2019.07-至今</span></h4>
+										<h5>职位：前端开发实习生、测试</h5>
+										<p style="color: #f4d03f;">工作描述：</p>
+											<p>1. 开发公司官网：与项目经理进行沟通、并在 UI 人员合作下，完成了公司官网网站的开发；</p>
+											<p>2. 开发 vMaker：vMaker 是公司其中的一个项目，它是一个可以实现自动驾驶标注工具的程序。很荣幸负责开发项目中的创建
+											部分（创建公司，数据管理、分发、标注、审核等人员、）；在一些前端大牛的指点下，还有自己独立改了一些 bug；</p>
+											<p>3. 开发 TSP 车辆监控平台：前端展示界面通过 mqtt 的协议方式与后端进行数据交换，包括车辆管理、OBU 管理、MEC 服务管
+											理，负责系统搭建、OBU 和 MEC 两个页面的前端部分以及三个页面的注册、和删除</p>
+											<p>4. 开发车辆数据分析系统：是利用ECharts实现的动态数据页面，可以展示散点分布图、热力分布图、时间极坐标图、地点路状图、行为统计雷达图、加速度折线图、超速情况饼图、百里灯光使用情况柱状图等。我负责了整体框架的搭建、用户分析界面的全部的图、数据渲染、还有切换到具体VIN号时利用不同csv数据展示不同的页面。</p>
+											<p>5. 功能测试：由于公司当时缺少测试人员，兼任测试人员，做了一段时间项目的功能测试；</p><!--EMPLOYMENT LIST DETAILS-->
+									</li>
+								</ul>
+							</div><!--RESUME THIRD TAB/EMPLYMENT TAB DETAILS ENDS-->
+						</div>
+					</div>
+				</li>
+				<!--/#resume-->
+				<!--PORTFOLIO PAGE-->
+				<li id="portfolio" class="hidden">
+					<div class="title-container">
+						<div class="shadow-img"></div>
+						<h2 class="rotate-out rotated">我的项目</h2> <!--PORTFOLIO TITLE-->                         
+					</div>
+
+					<!--PORTFOLIO CATEGORY LIST-->    
+					<div class="abs-child">
+						<ul class="button-group filters-button-group">
+							<li class="button is-checked" data-filter="*">展示全部</li>
+							<li class="button" data-filter=".photography">公司项目</li>
+							<li class="button" data-filter=".commercial">在校项目</li>
+							<li class="button" data-filter=".potrait">个人项目</li>
+						</ul><!--/.button-group filters-button-group-->
+					</div>
+					
+					<div class ="sec-porfolio description"> 
+						<div class="row">
+							<!--PORTFOLIO ITEM CONTAINER-->
+							<div class="folio-container">
+								<ul class="folio-item"><!--PORTFOLIO INDIVIDAUAL ITEM-->
+									<li class="view view-first photography">  
+										<img src="images/folio/exd.jpg" alt="logs" /><!--PORTFOLIO INDIVIDAUAL ITEM IMAGE--> 
+										<div class="mask">  
+											 <h2>智协慧同公司官方网站</h2> <!--PORTFOLIO INDIVIDAUAL ITEM TITLE-->                              
+											<!-- Button trigger modal -->
+											<a role="button" class="info" data-toggle="modal" data-target="#myModal">查看详情</a><!--PORTFOLIO INDIVIDAUAL ITEM MODAL LINK BY 'data-target'-->
+										 </div>  
+									</li>  
+									<li class="view view-second photography"><!--PORTFOLIO INDIVIDAUAL ITEM-->
+									  <img src="images/folio/tsp.png" alt="book" /><!--PORTFOLIO INDIVIDAUAL ITEM IMAGE--> 
+										<div class="mask"></div>
+										<div class="content">
+											<h2>TSP 车辆监控平台</h2><!--PORTFOLIO INDIVIDAUAL ITEM TITLE-->                                  
+											<a role="button" class="info" data-toggle="modal" data-target="#myModal2">查看详情</a><!--PORTFOLIO INDIVIDAUAL ITEM MODAL LINK BY 'data-target'-->
+										</div>
+									</li>
+									<li class="view view-tenth photography"> <!--PORTFOLIO INDIVIDAUAL ITEM--> 
+										 <img src="images/folio/vMaker.png" alt="beach" /> <!--PORTFOLIO INDIVIDAUAL ITEM IMAGE-->  
+										 <div class="mask">  
+											 <h2>vMaker 车辆自动驾驶标注工具</h2><!--PORTFOLIO INDIVIDAUAL ITEM TITLE-->                                    
+											 <a role="button" class="info" data-toggle="modal" data-target="#myModal3">查看详情</a>  <!--PORTFOLIO INDIVIDAUAL ITEM MODAL LINK BY 'data-target'-->
+										 </div>  
+									</li>                         
+									<li class="view view-second photography"><!--PORTFOLIO INDIVIDAUAL ITEM-->
+									  <img src="images/folio/vehicle-analysis.png" alt="guy" /><!--PORTFOLIO INDIVIDAUAL ITEM IMAGE--> 
+										<div class="mask"></div>
+										<div class="content">
+											<h2>车辆数据分析系统</h2><!--PORTFOLIO INDIVIDAUAL ITEM TITLE-->                                 
+											<a role="button" class="info" data-toggle="modal" data-target="#myModal4">查看详情</a><!--PORTFOLIO INDIVIDAUAL ITEM MODAL LINK BY 'data-target'-->
+										</div>
+									</li> 
+														
+									<li class="view view-first commercial"><!--PORTFOLIO INDIVIDAUAL ITEM-->  
+										 <img src="images/folio/douban.png" alt="illustration" /><!--PORTFOLIO INDIVIDAUAL ITEM IMAGE-->   
+										 <div class="mask">  
+											 <h2>仿豆瓣市集（移动端）</h2>                                   
+											 <a role="button" class="info" data-toggle="modal" data-target="#myModal5">查看详情</a> <!--PORTFOLIO INDIVIDAUAL ITEM MODAL LINK BY 'data-target'--> 
+										 </div>  
+									</li>                         
+									<li class="view view-second commercial"><!--PORTFOLIO INDIVIDAUAL ITEM-->
+									  <img src="images/folio/xiaomi.png" alt="guy" /><!--PORTFOLIO INDIVIDAUAL ITEM IMAGE--> 
+										<div class="mask"></div>
+										<div class="content">
+											<h2>仿小米官网</h2><!--PORTFOLIO INDIVIDAUAL ITEM TITLE-->                                 
+											<a role="button" class="info" data-toggle="modal" data-target="#myModal6">查看详情</a><!--PORTFOLIO INDIVIDAUAL ITEM MODAL LINK BY 'data-target'-->
+										</div>
+									</li> 
+									<li class="view view-tenth commercial"> <!--PORTFOLIO INDIVIDAUAL ITEM--> 
+										<img src="images/folio/hao123.png" alt="logs" /> <!--PORTFOLIO INDIVIDAUAL ITEM IMAGE-->  
+										<div class="mask">  
+											 <h2>仿好123官网</h2><!--PORTFOLIO INDIVIDAUAL ITEM TITLE-->                            
+											 <a role="button" class="info" data-toggle="modal" data-target="#myModal7">查看详情</a> <!--PORTFOLIO INDIVIDAUAL ITEM MODAL LINK BY 'data-target'--> 
+										 </div>  
+									</li>   
+									
+									<li class="view view-tenth commercial"><!--PORTFOLIO INDIVIDAUAL ITEM-->  
+										 <img src="images/folio/lagou.png" alt="beach" /> <!--PORTFOLIO INDIVIDAUAL ITEM IMAGE-->  
+										 <div class="mask">  
+											 <h2>仿拉勾官网</h2><!--PORTFOLIO INDIVIDAUAL ITEM TITLE-->                                    
+											 <a role="button" class="info" data-toggle="modal" data-target="#myModal8">查看详情</a> <!--PORTFOLIO INDIVIDAUAL ITEM MODAL LINK BY 'data-target'--> 
+										 </div>  
+									</li>             
+									<li class="view view-tenth potrait"><!--PORTFOLIO INDIVIDAUAL ITEM-->  
+										<img src="img/index.png" alt="beach" /> <!--PORTFOLIO INDIVIDAUAL ITEM IMAGE-->  
+										<div class="mask">  
+											<h2>网页版个人简历</h2><!--PORTFOLIO INDIVIDAUAL ITEM TITLE-->                                    
+											<a role="button" class="info" data-toggle="modal" data-target="#myModal9">查看详情</a> <!--PORTFOLIO INDIVIDAUAL ITEM MODAL LINK BY 'data-target'--> 
+										</div>  
+								   </li>  														
+											  
+								</ul>
+							</div>
+							<!--PORTFOLIO ITEM CONTAINER ENDS-->
+						</div>                          
+					</div>
+				</li><!--/#portfolio-->
+
+				<!--CONTACT PAGE-->
+				<li id="contact" class="hidden">
+					<div class="title-container" >
+						<div class="shadow-img"></div>               
+					   <h2 class="rotate-out rotated">联系方式</h2><!--CONTACT PAGE TITLE-->
+					</div>
+					<div class="description">                           
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="map-container">
+									<div id="map" style="width:100%;height:325px;"></div><!--GOOGLE MAP-->
+								</div>
+							</div>
+
+							<div class="col-sm-5">
+								<!--CONTACT DESCRIPTION-->
+								<h3 class="title">联系资料</h3>
+								<h6 class="sm-title"><span class="address-icon"><i class="fa fa-map-marker"></i></span>北京市昌平区龙兴园北区</h6>
+								<h6 class="sm-title"><span class="address-icon"><i class="fa fa-phone"></i></span>15526548879</h6>
+								<h6 class="sm-title"><span class="address-icon"><i class="fa fa-envelope"></i></span>sestid@163.com</h6>
+								<!--/CONTACT DESCRIPTION ENDS-->
+							</div>
+						                       
+							
+						</div>
+					</div>
+				</li><!--/#contact-->
+			</ul> 
+
+			<div class="row mobile-nav-container">
+				<!--SOCIAL NAV FOR MOBILE-->
+				<ul class="mobile-social no-padding">
+					<li>联系方式</li>
+					<li><a target="_blank" href="https://github.com/xiaola66"><i class="fa fa-github"></i></a></li>
+					<li><a class="csdn" target="_blank" href="https://blog.csdn.net/Sestid"><img src="./images/csdn.png" /></a></li>
+					<li><a id="email" href=""><i class="fa fa-envelope"></i></a></li>
+					<li><a id="qq" href=""><i class="fa fa-qq"></i></a></li>
+					<li><a id="weixin" href=""><i class="fa fa-weixin"></i></a></li>	
+				</ul><!--/.mobile-social-->
+			</div>               
+		</div><!--/.page-segment -->
+		<!--  <h6 class="copyright-text">Copyright © 2015 John Doe</h6> --> <!--if anyone wants copyright Texts--> 
+	</div>
+</div><!--/.container -->
+<!--PORTFOLIO IMAGE MODAL LIST-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel"><a style="text-decoration: none;color: #fff;" target="_blank" href="https://github.com/xiaola66/EXD-official-website">智协慧同公司官方网站</a></h4><!--PORTFOLIO IMAGE TITLE-->
+			</div>
+			<div class="modal-body">
+				<img src="images/folio/exd.jpg" class="img-responsive" alt="modal-image"><!--PORTFOLIO MODAL IMAGE-->
+			</div>
+			<div class="modal-footer">
+				<div class="mf-content">
+					<p><strong>项目网站：</strong><span><a target="_blank" href="https://www.smartsct.com">https://www.smartsct.com</a></span></p>
+					<p><strong>项目地址：</strong><span><a target="_blank" href="https://github.com/xiaola66/EXD-official-website">https://github.com/xiaola66/EXD-official-website</a></span></p>
+					<p><strong>负责部分：</strong><span>所有页面的开发，以及部署</span></p>						
+					<strong><p>项目描述：</p></strong>
+						<p>整个网页交互部分自己纯用原生 Js 和 jQuery 手写，有很多交互的部分，还有许多特效，没有用任何插件；经历好几次迭代
+						完成，其中包括公司增加新的项目、新的技术等等；一直在与项目经理沟通，还有 UI 人员配合下完成全部页面。
+						</p>
+				</div>                      
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel2">TSP 车辆监控平台</h4><!--PORTFOLIO IMAGE TITLE-->
+			</div>
+			<div class="modal-body">
+				<img src="images/folio/tsp.png" class="img-responsive" alt="modal-image"><!--PORTFOLIO MODAL IMAGE-->
+			</div>
+			<div class="modal-footer">
+				<div class="mf-content">
+					<p><strong>项目地址：</strong><span><a target="_blank" href="https://github.com/xiaola66/TSP-">https://github.com/xiaola66/TSP-</a></span></p>
+					<p><strong>负责部分：</strong><span>系统搭建、两个页面以及全部的注册和删除</span></p>		
+					<strong><p>项目描述：</p></strong>
+						<p>利用了 Antd Desgin Pro 构建系统并开发，前端展示界面通过 mqtt 的协议方式与后端进行数据交换，给回相关的控制信
+							息，TSP 平台能够反馈给 MEC，然后 MEC 来实施控制包括车辆管理、OBU 管理、MEC 服务管理，主要是跟后端人员进行数
+							据交互。									
+						</p>
+				</div>                     
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel3">vMaker  车辆自动驾驶标注工具</h4><!--PORTFOLIO IMAGE TITLE-->
+			</div>
+			<div class="modal-body">
+				<img src="images/folio/vMaker.png" class="img-responsive" alt="modal-image"><!--PORTFOLIO MODAL IMAGE-->
+			</div>
+			<div class="modal-footer">
+				<div class="mf-content">
+					<p><strong>项目地址：</strong><span><a target="_blank" href="https://github.com/xiaola66/vMaker-">https://github.com/xiaola66/vMaker-</a></span></p>
+					<p><strong>负责部分：</strong><span>项目中的创建部分（创建公司，数据管理、分发、标注、审核等人员、）；测试人员</span></p>	
+					<strong><p>项目描述：</p></strong>
+						<p>利用react，redux，Material-UI，Node.js，webpack等前端技术开发的。</p>
+						<p>包括企业管理人员界面（其中有公司管理、用户管理、日志管理 ；可以创建标注公司、任务分发人员、数据管理人员、企业审核人员、感知组组长）；数据管理人员界面（其中有创建项目、导入项目、项目管理、标注标签、数据管理）；分发人员界面（可以查看项目状态，并将项目分发给具体标注公司以及标注人员）；标注负责人界面（其中有项目管理、用户管理、日志管理；可以创建标注人员和标注审核人员）；标注人员界面（可以对项目图片进行标注）；标注审核人员界面（对标注人员提交的项目进行审核）；企业审核人员（对项目进行终审）；感知组组长（对数据管理人员的数据下载进行审核）								
+						</p>
+				</div>                       
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel4">车辆数据分析系统</h4><!--PORTFOLIO IMAGE TITLE-->
+			</div>
+			<div class="modal-body">
+				<img src="images/folio/vehicle-analysis.png" class="img-responsive" alt="modal-image"><!--PORTFOLIO MODAL IMAGE-->
+			</div>
+			<div class="modal-footer">
+				<div class="mf-content">
+					<p><strong>项目地址：</strong><span><a target="_blank" href="https://github.com/xiaola66/-">https://github.com/xiaola66/-</a></span></p>
+					<p><strong>负责部分：</strong><span>整体框架的搭建、用户分析界面的全部的图、数据渲染、还有切换到具体VIN号时利用不同csv数据展示不同的页面。</span></p>	
+					<strong><p>项目描述：</p></strong>
+						<p>利用jQuery和Bootstrap搭建的框架，EChart.js画图，实现的动态数据页面，兼容IE9，主要包括位置分析、用户分析、现场仿真、用户查询以及几个详情页面。可以展示散点分布图、热力分布图、时间极坐标图、地点路状图、行为统计雷达图、加速度折线图、超速情况饼图、百里灯光使用情况柱状图等。还会根据数据分析师给的相应csv文件进行页面渲染，以及根据VIN号显示对应的图，点击图上还会弹出炫酷的热点分布地图蒙层。								
+						</p>
+				</div>                       
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel5">仿豆瓣市集（移动端）</h4><!--PORTFOLIO IMAGE TITLE-->
+			</div>
+			<div class="modal-body">
+				<img src="images/folio/douban.png" class="img-responsive" alt="modal-image"><!--PORTFOLIO MODAL IMAGE-->
+			</div>
+			<div class="modal-footer">
+				<div class="mf-content">
+					<p><strong>项目地址：</strong><span><a target="_blank" href="https://github.com/xiaola66/react-douban-mobile-">https://github.com/xiaola66/react-douban-mobile-</a></span></p>
+					<p><strong>负责部分：</strong><span>所有的页面开发以及前后交互对接口</span></p>
+					<strong><p>项目描述：</p></strong>
+						<p>利用了 html+css+Js+jQuery，还有 react 分别完成这个项目的开发，并且用 Ajax、Axios 实现了前后端交互。负责整个项
+								目的前端网页开发，其中包括首页、商品详情、加入购物车、购物车、登录、注册等页面。								
+						</p>
+				</div>                        
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel6" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel5">仿小米官网</h4><!--PORTFOLIO IMAGE TITLE-->
+			</div>
+			<div class="modal-body">
+				<img src="images/folio/xiaomi.png" class="img-responsive" alt="modal-image"><!--PORTFOLIO MODAL IMAGE-->
+			</div>
+			<div class="modal-footer">
+				<div class="mf-content">
+					<p><strong>项目地址：</strong><span><a target="_blank" href="https://github.com/xiaola66/xiaomi">https://github.com/xiaola66/xiaomi</a></span></p>
+					<p><strong>负责部分：</strong><span>所有的页面开发以及交互</span></p>
+					<strong><p>项目描述：</p></strong>
+						<p>利用了 html+css+Js+jQuery，实现了小米官网的首页，可以说得上是基本还原。（banmner轮播图，商品隐藏列表的展示，倒计时秒杀等）								
+						</p>
+				</div>                        
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel7" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel5">仿hao123官网</h4><!--PORTFOLIO IMAGE TITLE-->
+			</div>
+			<div class="modal-body">
+				<img src="images/folio/hao123.png" class="img-responsive" alt="modal-image"><!--PORTFOLIO MODAL IMAGE-->
+			</div>
+			<div class="modal-footer">
+				<div class="mf-content">
+					<p><strong>项目地址：</strong><span><a target="_blank" href="https://github.com/xiaola66/-Webpages">https://github.com/xiaola66/-Webpages</a></span></p>
+					<p><strong>负责部分：</strong><span>所有的页面开发以及交互</span></p>
+					<strong><p>项目描述：</p></strong>
+						<p>利用了 html+css+Js+jQuery，实现了hao123官网的首页，可以说得上是基本还原。（隐藏列表的展示，table选项卡等）								
+						</p>
+				</div>                        
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel8" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel5">仿拉勾官网</h4><!--PORTFOLIO IMAGE TITLE-->
+			</div>
+			<div class="modal-body">
+				<img src="images/folio/lagou.png" class="img-responsive" alt="modal-image"><!--PORTFOLIO MODAL IMAGE-->
+			</div>
+			<div class="modal-footer">
+				<div class="mf-content">
+					<p><strong>项目地址：</strong><span><a target="_blank" href="https://github.com/xiaola66/-Webpages">https://github.com/xiaola66/-Webpages</a></span></p>
+					<p><strong>负责部分：</strong><span>所有的页面开发以及交互</span></p>
+					<strong><p>项目描述：</p></strong>
+						<p>利用了 html+css+Js+jQuery，实现了拉勾官网的首页，可以说得上是基本还原。（banmner轮播图，职位隐藏列表的展示，职位招聘信息的js字符串拼接渲染）								
+						</p>
+				</div>                        
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel9" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel5">网页版个人简历</h4><!--PORTFOLIO IMAGE TITLE-->
+			</div>
+			<div class="modal-body">
+				<img src="img/index.png" class="img-responsive" alt="modal-image"><!--PORTFOLIO MODAL IMAGE-->
+			</div>
+			<div class="modal-footer">
+				<div class="mf-content">
+					<p><strong>项目地址：</strong><span><a target="_blank" href="https://github.com/xiaola66/My-web-resume">https://github.com/xiaola66/My-web-resume</a></span></p>
+					<p><strong>负责部分：</strong><span>所有的页面开发以及交互</span></p>
+					<strong><p>项目描述：</p></strong>
+						<p>利用jQuery、jQuery UI、Bootstrap、isotope插件、Font Awesome进行开发的响应式网页</p>
+						<p>1、刚进入画面：(包括动态展示、鼠标提示)</p>
+						<p>	2、页面整体（PC端）：(在电脑上查看)</p>
+						<p>3、我的主页：(包括动态展示、鼠标提示)</p>
+							<p>4、我的简历：(包括个人技能、教育背景、工作经历)</p>
+							（1）个人技能：
+							（2）教育背景：（包括下拉菜单）
+							（3）工作经历：（包括滚动框）
+							<p>5、我的项目：(包括展示全部、公司项目、在校项目、个人项目；鼠标悬停会带特效的显示项目名称和“查看详情”按钮)</p>
+							<p>6、查看项目详情：(会弹出蒙层显示项目名称、项目图片、项目地址、负责部分、项目描述)</p>
+				</div>                        
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade" id="subscribe_modal_1" tabindex="-1" role="dialog" aria-labelledby="subscribe_modal_1" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h2 class="modal-title">Thank You</h2><!--PORTFOLIO IMAGE TITLE-->
+			</div>
+			<div class="modal-body">
+				<div class="text-center mail-sucsess"><h3> <span>your mail has been sent</span></h3></div>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!--javascript files
+=============================================================-->
+
+<script>
+	
+</script>
+</html>
+</script>
+<script type="text/javascript" src="js/jQueryTween-aio-min.js"></script> <!-- JQUERY Tween Plugin -->
+<script type="text/javascript" src="js/jquery.tabslet.min.js"></script> <!-- JQUERY Tab plugin-->     
+<script type="text/javascript" src="js/progressbar.min.js"></script> <!-- JQUERY Progressbar Plugin-->
+<script type="text/javascript" src="js/jquery.simple-text-rotator.min.js"></script> <!-- JQUERY Text Rotator-->
+<script type="text/javascript" src="js/bootstrap.min.js"></script> <!-- Bootstrap file-->
+<script type="text/javascript" src='js/isotope.pkgd.min.js'></script>
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>
