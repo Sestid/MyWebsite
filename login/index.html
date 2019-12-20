@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>	
+<head>
+<title>登录</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<meta name="keywords" content="Flat Dark Web Login Form Responsive Templates, Iphone Widget Template, Smartphone login forms,Login form, Widget Template, Responsive Templates, a Ipad 404 Templates, Flat Responsive Templates" />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!--//webfonts-->
+<script src="../index/assets/js/jquery.min.js"></script>
+</head>
+<body>
+ <!--SIGN UP-->
+ <h1>登录页面</h1>
+<div class="login-form">
+	<div class="close"> </div>
+		<div class="head-info">
+			<label class="lbl-1"> </label>
+			<label class="lbl-2"> </label>
+			<label class="lbl-3"> </label>
+		</div>
+			<div class="clear"> </div>
+	<div class="avtar">
+		<img src="images/avtar.png" />
+	</div>
+			<form>
+				<input type="text" id="username" class="text" placeholder="请输入用户名" >
+					<div class="key">
+				<input type="password" id="password" placeholder="请输入密码">
+					</div>
+			</form>
+	<div class="signin">
+		<input type="submit" id="submit" value="登录" >
+	</div>
+</div>
+<div class="copy-rights">
+	<p style="font-size: 12px;">Copyright &copy; 2019.Shichunyu All rights reserved.</p>
+</div>
+
+</body>
+<script>
+const username = document.getElementById('username');
+const password = document.getElementById('password');
+$('#submit').on('click', function(c){  
+    if(username.value = 'shichunyu' && password.value  === '521shichunyu+'){
+        window.location.href = '../My-web-resume/index.html'
+    }else{
+        alert('请联系首页微信获取账号！！！')
+    }
+})
+</script>
+<script src="js/login.js"></script>
+</html>

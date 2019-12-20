@@ -128,7 +128,9 @@
 		$('.mengcengqq').hide()
 	});
 	$('.email').click(function(){
-		alert('sestid@163.com')
+		alert('网易邮箱：sestid@163.com');
+		alert('谷歌邮箱：shichunyu9@gmail.com');
+		alert('QQ邮箱：1432824214@qq.com');
 	})
 
 })(jQuery);
