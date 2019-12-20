@@ -65,7 +65,7 @@ background: url('../images/close.png') no-repeat 0px 0px;
 h1 {
 	font-family: 'Exo 2', sans-serif;
 	  text-align: center;
-	  padding-top: 4em;
+	  padding-top: 0.6em;
 	  font-weight: 400;
 	  color: #2B2B36;
 	  font-size: 2em;
@@ -261,9 +261,9 @@ label.lbl-3 {
 	.copy-rights {
 	  margin-top: 3em;
 	}
-	h1 {
+	/* h1 {
 	  padding-top: 2em;
-	}
+	} */
 	body {
 	  min-height: 675px;
 	}
@@ -271,7 +271,7 @@ label.lbl-3 {
 @media (max-width:768px){
 	.login-form {
 	  width: 50%;
-	    margin: 12% auto 0 auto;
+	    /* margin: 12% auto 0 auto; */
 	}
 	.key {
 	  background: url(../images/pass.png) no-repeat 342px 18px;
@@ -283,7 +283,7 @@ label.lbl-3 {
 @media (max-width:640px){
 	.login-form {
 	  width: 60%;
-	  margin: 20% auto 0 auto;
+	  /* margin: 20% auto 0 auto; */
 	}
 	.key {
 	  background: url(../images/pass.png) no-repeat 342px 19px;
@@ -295,13 +295,13 @@ label.lbl-3 {
 	}
 }
 @media (max-width:320px){
-	h1 {
+	/* h1 {
 	  padding-top: 1em;
 	  font-size: 1.5em;
-	}
+	} */
 	.login-form {
 	  width: 90%;
-	  margin: 10% auto 0 auto;
+	  /* margin: 10% auto 0 auto; */
 	}
 	input[type="text"] {
 	  width: 62%;
