@@ -409,7 +409,7 @@ DJDDZ.PlayPoker=function(){//出选中的牌
     if(GMain.Poker[GMain.DealerNum].length==0)DJDDZ.GameOver();//牌出完，游戏结束
 }
 var GMain={
-    Size:{width:900, height:600}//屏幕大小
+    Size:{width:1000, height:800}//屏幕大小
     ,URL:""
     ,Poker:null
     ,LandlordNum:null//地主编号
