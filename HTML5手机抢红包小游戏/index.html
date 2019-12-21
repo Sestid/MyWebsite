@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="screen-orientation" content="">
+<title>抢红包</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<style>
+
+</style>
+</head>
+<body>
+<div class="main" id="main">
+	<div class="container" id="container">
+			
+	</div>
+	
+	<div class="mask" id="mask">
+		<span id="start"><img src="img/a1.png"></span>
+		<span id="start_piv"><a href="zjjl.html"><img src="img/a2.png"></a></span>
+	</div>
+
+<div class="ft"><img src="img/g1.png" ></div>
+</div>
+
+<script src="js/Block.js"></script>
+<script>
+	var oContainer = document.getElementById('container');
+	var block = new Block(oContainer);
+	block.init();
+
+	var mask = document.getElementById('mask');
+	var start = document.getElementById('start');
+	start.onclick = function(){
+		block.start();
+		mask.style.display = 'none';
+	 console.log("111");
+	}
+</script>
+<div style="text-align:center;">
+	<div style="
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 40px;
+	z-index: 99999999999;
+	"><a href="../index.html"><img style="width:100%" src="../index/images/toindex.png" alt=""></a></div>
+	<div style=
+	"color: rgba(255, 255, 255, 0.5);
+	font-size: 0.9em;
+	margin: 0 0 2em 0;
+	padding: 0;
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	margin: 0 auto;
+	bottom: 0;
+	z-index: 9999999999;">Copyright &copy; 2019.Shichunyu All rights reserved.</div>
+</div>
+</body>
+</html>
