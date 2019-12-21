@@ -1,0 +1,345 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>泡泡</title>
+	<link href="../css/main.css" rel="stylesheet" type="text/css" />
+	<link href="../css/all.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../js/play.js"></script>
+</head>
+<body onload="go()">
+    <audio src="music.mp3" controls="controls" autoplay="autoplay" loop="loop"></audio>
+	<audio id ="sound" src="" controls="controls" autoplay="autoplay" ></audio>
+    <div class="con-play" id="imgdiv">
+        <!--计数 -->
+        <div class="jishu">
+           <img alt="" src="../images/sidai.png" width="100%"> 
+           <div id="time" class="time">00:00</div>
+        </div>
+        <!--爱的泡泡 -->
+<!--        <div class="lovepao">-->
+<!--           <img alt="" src="../images/loveren02.png" width="95%" style="margin-top: 10px; margin-left: 10px;"> -->
+<!--           <span class="writepao"></span>-->
+<!--        </div>-->
+        <!--按钮 -->
+        <a class="returnbtn" href="chooselove.html"></a>
+        <a class="whatbtn" onclick="helptan()" href="javascript:void(0);"></a>
+        <!--破坏性泡泡 
+        <a class="hidpao hid01" href="javascript:void(0);"></a>
+        <a class="hidpao hid02" href="javascript:void(0);"></a>
+        <a class="hidpao hid03" href="javascript:void(0);"></a>
+        <a class="hidpao hid04" href="javascript:void(0);"></a>-->
+        <!--成功弹出层 -->
+        <div class="tan ok" id="success">
+           <a class="btn-share" href="#" onclick="sharetan()"></a>
+           <a class="btn-play" href="#" onclick="replay()"></a>
+           <div class="tantime" id="tantime-okid">01:22</div>
+           <div class="tanlovepao">
+	           <img alt="" src="../images/loveren02.png"  width="100%"> 
+	           <span class="writepaotan"></span>
+	       </div>
+	       
+        </div>
+        <!--失败弹出层 -->
+        <div class="tan fos" id="fail">
+            <a class="btn-share" href="#" onclick="sharetan()"></a>
+            <a class="btn-play" href="#" onclick="replay()"></a>
+            <div class="tantime" id="tantime-fosid">01:22</div>
+            <div class="tanlovepao">
+	           <img alt="" src="../images/loveren02.png"  width="100%"> 
+	           <span class="tanflspao"></span>
+	       </div>
+        </div>
+        <!--蒙层 -->
+        <div class="greybg" id="greybg"></div>
+        <!-- 分享弹出层 -->
+        <div class="sharetan" id="sharetan-id"><img alt="" src="../images/07-22.png" width="100%"> </div>
+        <!-- 帮助弹出层 -->
+        <div onclick="palypage()" class="sharetan" id="helptan-id"><img alt="" src="../images/02.jpg" width="100%"></div> 
+           
+    </div>
+    
+    
+    <SCRIPT language=JavaScript>
+    function helptan(){
+    	document.getElementById('helptan-id').style.display = "block"; 
+    }
+    function palypage(){
+    	window.location.href="play.html";
+    }
+    function replay(){
+    	window.location.reload();
+    }
+    function sharetan(){
+        document.getElementById('sharetan-id').style.display = "block";   
+    }
+    //计时器
+var c=0
+var time;
+var hourxs="00";
+var minxs="00";
+var secxs="00";
+function timedCount()  
+{  
+    var temptextmin=document.getElementById('time');
+    var tantimeokid=document.getElementById('tantime-okid');
+    var tantimefosid=document.getElementById('tantime-fosid');
+    var hour = parseInt(c / 3600);// 小时数  
+    var min = parseInt(c / 60);// 分钟数  
+    var lastsecs = c % 60; 
+    if(hour<10){
+    	hourxs="0"+hour;
+    }else{
+    	hourxs=hour;
+    }
+    if(min<10){
+    	minxs="0"+min;
+    }else{
+    	minxs=min;
+    }
+    if(lastsecs<10){
+    	secxs="0"+lastsecs;
+    }else{
+    	secxs=lastsecs;
+    }
+	temptextmin.innerHTML = minxs + ":" + secxs;  
+	tantimeokid.innerHTML = minxs + ":" + secxs;  
+	tantimefosid.innerHTML = minxs + ":" + secxs;  
+	c=c+1;  
+	time=setTimeout("timedCount()",1000);  
+//document.getElementById('start').style.display = "none";     
+//document.getElementById('end').style.display = "";   
+}  
+    
+var xqsd=100;//小球速度
+var dqsd=1500;//大球速度
+var size=35;//小球的大小
+var jgsd=0;
+function deletePao(id){
+	//document.getElementById("img"+id).style.display = "none";
+	//document.getElementById("img"+id).firstChild.
+	//document.getElementById("img"+id).className= "hidpao hid01po";
+	document.getElementById("img"+id).style.display = "none";
+	document.all.sound.src = "water.mp3";
+	setTimeout("showPao("+id+")",0);
+}
+var countId;
+function showPao(id){
+	imgn++;
+	getPao(countId++);
+}
+function showfail(){
+	document.getElementById("fail").style.display = "block";
+	document.getElementById("greybg").style.display = "block";
+}
+function showsuccess(){
+	document.getElementById("success").style.display = "block";
+	document.getElementById("greybg").style.display = "block";
+}
+var $=function(obj){return typeof(obj)=="string"?document.getElementById(obj):obj;};
+function go(){
+	moveTo(0,0);focus();
+        resizeTo(2000,2000);
+        w=document.body.clientWidth;
+        h=document.body.clientHeight;
+        $("imgdiv").style.width =w+"px";
+        $("imgdiv").style.height=h+"px";
+        var d='';
+        x=[];
+        y=[];
+        mr=[];
+        xs=[];
+        ys=[];
+        fm=[];
+        fr=[];
+        fn=[];
+        var wr=w-100;
+        var hr=h-100;
+        imgn=8;//小球个数
+        countId=imgn;
+        for(var i=0;i<imgn;i++){
+                var xr=Math.round(Math.random()*wr);
+                var yr=Math.round(Math.random()*hr);
+                mr[i]=Math.round(Math.random()*2*Math.PI);
+                xs[i]=Math.round(Math.random()*5);
+                ys[i]=Math.round(Math.random()*5);
+                if(i==0){
+                	x[i]=90;
+                	y[i]=350;
+                }else if(i%4==1){
+                	x[i]=40;
+                	y[i]=40;
+                }else if(i%4==2){
+                	x[i]=10;
+                	y[i]=20;
+                }else if(i%4==3){
+                	x[i]=200;
+                	y[i]=50;
+                }else if(i%4==0){
+                	x[i]=200;
+                	y[i]=10;
+                }
+                if(i==0){
+                	fm[i]=dqsd;
+                	fr[i]=70;
+                	fn[i]=fr[i]*2;
+                    d+="<div class='tanlovepao' id='img"+i+"' style='position:absolute;width:0px;height:0px; left:"+x[i]+"px;top:"+y[i]+"px;z-index:10;' ><img alt='' src='../images/loveren02.png' width='95%' style='margin-top: 10px; margin-left: 10px;'> <span class='writepao'></span></div>";
+                }else{
+                	fm[i]=xqsd;
+                	fr[i]=size;
+                	fn[i]=fr[i]*2;
+                	d+="<a id='img"+i+"' class='hidpao hid01'  href='javascript:void(0);' style='position:absolute;width:0px;height:0px; left:"+x[i]+"px;top:"+y[i]+"px;z-index:10;' onclick=deletePao('"+i+"')></a>";
+                }
+        }
+        $("imgdiv").innerHTML+=d;
+        runi=0;
+        setInterval("changxqsd()",3000);
+        runInterval();
+        timedCount();
+}
+function changxqsd(){
+	jgsd+=30;
+}
+function getPao(i){
+	    w=document.body.clientWidth;
+        h=document.body.clientHeight;
+        var d='';
+        var wr=w-100;
+        var hr=h-100;
+        var xr=Math.round(Math.random()*wr);
+        var yr=Math.round(Math.random()*hr);
+        mr[i]=Math.round(Math.random()*2*Math.PI);
+        xs[i]=Math.round(Math.random()*5);
+        ys[i]=Math.round(Math.random()*5);
+        if(i==0){
+        	x[i]=150;
+            y[i]=200;
+        }else if(i%4==1){
+        	x[i]=10;
+        	y[i]=10;
+        }else if(i%4==2){
+        	x[i]=10;
+        	y[i]=150;
+        }else if(i%4==3){
+        	x[i]=250;
+        	y[i]=150;
+        }else if(i%4==0){
+        	x[i]=250;
+        	y[i]=10;
+        }
+       	fm[i]=xqsd-jgsd;
+       	//调节难度 设定最快速度为20（值越小，速度越大）
+       	if(fm[i]<20){
+       		fm[i]=20;
+       	}
+       	fr[i]=size;
+       	fn[i]=fr[i]*2;
+       	d+="<a id='img"+i+"' class='hidpao hid01'  href='javascript:void(0);' style='position:absolute;width:0px;height:0px; left:"+x[i]+"px;top:"+y[i]+"px;z-index:10;' onclick=deletePao('"+i+"')></a>";
+        $("imgdiv").innerHTML+=d;
+        runInterval();
+}
+var goon=1;
+function runInterval(){
+	if(goon==1){
+		$("img"+runi).src="1.jpg";
+	    $("img"+runi).style.width =(fr[runi]*2)+"px";
+	    $("img"+runi).style.height=(fr[runi]*2)+"px";
+	    setInterval("runmove('"+runi+"');",fm[runi]);
+	    runi++;
+	    var timer=setTimeout("runInterval()",0);
+	    if(runi>imgn-1){clearTimeout(timer);}
+	}
+}
+onresize=function(){
+        w=document.body.clientWidth;
+        h=document.body.clientHeight;
+        $("imgdiv").style.width =w+"px";
+        $("imgdiv").style.height=h+"px";
+};
+function runmove(n){
+	if(goon==1){
+		x[n]+=xs[n];
+        y[n]+=ys[n];
+        $("img"+n).style.left=x[n];
+        $("img"+n).style.top =y[n];
+        for(var i=0;i<imgn;i++){
+                if(i!=n){
+                        var RR=fr[n]+fr[i];
+                        if(Math.abs(x[n]+fr[n]-x[i]-fr[i])<RR){
+                                if(Math.abs(y[n]+fr[n]-y[i]-fr[i])<RR){
+                                        var dx=(x[n]-x[i]);
+                                        var	dy=(y[n]-y[i]);
+                                       	//坐标 圆1
+                                       	//x[n]+fr[n];
+                                       	//y[n]+fr[n];
+                                       	//坐标 圆
+                                       	//x[i]+fr[i];
+                                       	//y[i]+fr[i];
+                                       	var R=Math.sqrt((x[n]+fr[n]-x[i]-fr[i])*(x[n]+fr[n]-x[i]-fr[i])+(y[n]+fr[n]-y[i]-fr[i])*(y[n]+fr[n]-y[i]-fr[i]))
+                                        var displayI = document.getElementById("img"+i).style.display;
+                                        var displayN = document.getElementById("img"+n).style.display;
+                                        if(displayI!="none"&&displayN!="none"){
+                                        	if(R<RR){
+                                                x[n]+=(RR-R)*dx/R;
+                                                y[n]+=(RR-R)*dy/R;
+                                                $("img"+n).style.left=x[n];
+                                                $("img"+n).style.top =y[n];
+                                                  if(dx==0){
+                                                        var dvx=0;
+                                                }else{
+                                                	if(i==0||n==0){
+                                                		//alert("爱情泡泡被撞死了!");
+                                                		goon=0;
+                                                		if(c>=60){
+                                                			showsuccess();
+                                                		}else{
+                                                			showfail();
+                                                		}
+                                                		clearTimeout(time);
+                                                		break;
+                                                	}
+                                                        var dvx=(fm[i]*(2*xs[i]*dx*dx+2*ys[i]*dx*dy)-fm[n]*(2*xs[n]*dx*dx+2*ys[n]*dy*dx))/(fm[n]+fm[i])/(dx*dx+dy*dy);
+                                                }
+                                                if(dy==0){
+                                                        var dvy=0;
+                                                }else{
+                                                	if(i==0||n==0){
+                                                		//alert("爱情泡泡被撞死了!");
+                                                		goon=0;
+                                                		if(c>=60){
+                                                			showsuccess();
+                                                		}else{
+                                                			showfail();
+                                                		}
+                                                		clearTimeout(time);
+                                                	    break;
+                                                	}
+                                                        var dvy=(fm[i]*(2*xs[i]*dx*dy+2*ys[i]*dy*dy)-fm[n]*(2*xs[n]*dx*dy+2*ys[n]*dy*dy))/(fm[n]+fm[i])/(dx*dx+dy*dy);
+                                                }
+                                                xs[n]+=dvx;
+                                                ys[n]+=dvy;
+                                                xs[i]-=dvx;
+                                                ys[i]-=dvy;
+                                                break;
+                                        	}
+                                        }
+                                }
+                        }
+                }
+        }
+        switch(true){
+                case ((x[n]<0&&xs[n]<0)||(x[n]+fn[n]>w&&xs[n]>0)):xs[n]*=-1;break;
+                case ((y[n]<0&&ys[n]<0)||(y[n]+fn[n]>h&&ys[n]>0)):ys[n]*=-1;break;
+        }
+	}else{
+		return false;
+		//window.location.reload();重新开始
+	}
+        
+}
+</SCRIPT>
+</body>
+</html>
+

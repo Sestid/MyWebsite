@@ -1,0 +1,571 @@
+@charset "utf-8";
+audio{
+   position: absolute;
+   top:0;
+   left:0;
+}
+.con-index{
+	width:100%;
+	height:100%;
+}
+.con-index .startbtn{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 130px;
+  margin-left: -133px;
+  width: 260px;
+  height: 80px;
+  z-index: 1000;
+  background: url("../images/start.png") no-repeat center;
+  background-size: 100% 100%;
+}
+
+.con-choose{
+	width:100%;
+	height:100%;
+	position: relative;
+	margin-top: -50px;
+}
+.con-choose .lp-cover{
+	position: absolute;
+	width: 140px;
+    height: 140px;
+    border-radius:70px;
+}
+.con-choose .love-one{
+	background: url("../images/lovecao01.png") no-repeat center;
+  background-size: 90% 90%;
+  top: 50%;
+  left: 50%;
+  margin-top: -196px;
+  margin-left: -55px;
+  
+    animation: hidp01 1s;
+	-moz-animation: hidp01 1s;	
+	-webkit-animation: hidp01 1s;	
+	-o-animation: hidp01 1s;	
+	
+    animation-timing-function:linear;/**--速度相同--*/
+	-moz-animation-timing-function:linear;
+	-webkit-animation-timing-function:linear;
+	-o-animation-timing-function:linear;
+	
+	animation-iteration-count: infinite; /**定义动画的播放次数*/
+	-ms-animation-iteration-count: infinite; 
+	-moz-animation-iteration-count: infinite;   
+	-webkit-animation-iteration-count: infinite;  
+	-o-animation-iteration-count: infinite;  
+	
+	animation-direction:alternate;
+-webkit-animation-direction:alternate;
+}
+.con-choose .love-two{
+	background: url("../images/lovecao02.png") no-repeat center;
+  background-size: 90% 90%;
+  width: 170px;
+  height: 170px;
+  border-radius: 85px;
+  top: 50%;
+  left: 50%;
+  margin-top: -55px;
+  margin-left: -156px;
+  
+  animation: hidp02 1s;
+	-moz-animation: hidp02 1s;	
+	-webkit-animation: hidp02 1s;	
+	-o-animation: hidp02 1s;	
+	
+    animation-timing-function:linear;/**--速度相同--*/
+	-moz-animation-timing-function:linear;
+	-webkit-animation-timing-function:linear;
+	-o-animation-timing-function:linear;
+	
+	animation-iteration-count: infinite; /**定义动画的播放次数*/
+	-ms-animation-iteration-count: infinite; 
+	-moz-animation-iteration-count: infinite;   
+	-webkit-animation-iteration-count: infinite;  
+	-o-animation-iteration-count: infinite;  
+	
+	animation-direction:alternate;
+-webkit-animation-direction:alternate;
+}
+.con-choose .love-two span.writepao{
+	width: 170px;
+  height: 170px;
+  border-radius: 85px;
+}
+.con-choose .love-three{
+	background: url("../images/lovecao03.png") no-repeat center;
+  background-size: 90% 90%;
+  top: 50%;
+  left: 50%;
+  margin-top: 60px;
+  margin-left: 20px;
+  
+  animation: hidp03 1s;
+	-moz-animation: hidp03 1s;	
+	-webkit-animation: hidp03 1s;	
+	-o-animation: hidp03 1s;	
+	
+    animation-timing-function:linear;/**--速度相同--*/
+	-moz-animation-timing-function:linear;
+	-webkit-animation-timing-function:linear;
+	-o-animation-timing-function:linear;
+	
+	animation-iteration-count: infinite; /**定义动画的播放次数*/
+	-ms-animation-iteration-count: infinite; 
+	-moz-animation-iteration-count: infinite;   
+	-webkit-animation-iteration-count: infinite;  
+	-o-animation-iteration-count: infinite;  
+	
+	animation-direction:alternate;
+-webkit-animation-direction:alternate;
+}
+.con-choose  .lp-cover a{
+	display: block;
+  position: relative;
+  width:100%;
+  height:100%;
+  border-radius:85px;
+  overflow: hidden;
+}
+.tanlovepao{
+    border-radius:70px;
+    overflow: hidden;
+}
+
+.con-choose .writepao{
+	position: absolute;
+  top: 0;
+  left: 0;
+  width: 144px;
+  height: 144px;
+  margin-top:-2px;
+  margin-left:-2px;
+  border-radius:75px;
+  background: url("../images/kongpao.png") no-repeat center;
+  background-size: 100% 100%;
+}
+
+.con-play{
+	width:100%;
+	height:100%;
+	position: relative;
+	background: url("../images/palyshow.jpg") no-repeat center;
+	background-size: 100% 100%;
+}
+.con-play .jishu{
+    width: 255px;
+  height: 85px;
+  background: url("") no-repeat center;
+  background-size: 100% 100%;
+  margin: 0 auto;
+  padding-top: 40px;
+  position: relative;
+}
+.con-play .time{
+    width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 144px;
+  font-size: 26px;
+  color: #ffffff;
+}
+.con-play .writepao{
+	display: block;
+  width: 150px;
+  height: 150px;
+  background: url("../images/kongpao2.png") no-repeat center;
+  background-size: 100% 100%;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  overflow: hidden;
+}
+.con-play .writepaotan{
+	display: block;
+  width: 180px;
+  height: 180px;
+  background: url("../images/kongpao2.png") no-repeat center;
+  background-size: 100% 100%;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  overflow: hidden;
+}
+.con-play .lovepao{
+	display: block;
+  width: 170px;
+  height: 170px;
+  background: url("../images/lovecao02.png") no-repeat left 20px top 20px;
+  background-size: 100% 100%;
+  border-radius: 85px;
+  position: absolute;
+  top: 30%;
+  left: 24%;
+  overflow: hidden;
+}
+.con-play .hidpao{
+	display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.con-play .returnbtn{
+	display: block;
+	width: 60px;
+	height: 60px;
+	background: url("../images/return.png") no-repeat center;
+  background-size: 100% 100%;
+  overflow: hidden;
+  position: absolute;
+  left:30px;
+  bottom: 40px;
+	
+}
+.con-play .whatbtn{
+	display: block;
+	width: 60px;
+	height: 60px;
+	background: url("../images/what.png") no-repeat center;
+  background-size: 100% 100%;
+  overflow: hidden;
+  position: absolute;
+  right:30px;
+  bottom: 40px;
+	
+}
+.con-play .hid01{
+	position: absolute;
+  top: 230px;
+  left: 31px;
+  background: url("../images/hidpao_01.png") no-repeat center;
+  background-size: 100% 100%;
+}
+.con-play .hid01po{
+   position: absolute;
+  top: 230px;
+  left: 31px;
+  background: url("../images/konghidpao.png") no-repeat center;
+  background-size: 100% 100%;
+}
+.con-play .hid02{
+	position: absolute;
+  top: 421px;
+  left: 89px;
+  background: url("../images/hidpao_02.png") no-repeat center;
+  background-size: 100% 100%;
+}
+.con-play .hid03{
+	position: absolute;
+  top: 295px;
+  left: 244px;
+  background: url("../images/hidpao_04.png") no-repeat center;
+  background-size: 100% 100%;
+}
+.con-play .hid04{
+	position: absolute;
+  top: 20px;
+  left: 100px;
+  background: url("../images/hidpao_04.png") no-repeat center;
+  background-size: 100% 100%;
+}
+
+.con-play .greybg{
+	display:none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left:0;
+	background-color: #333333;
+	opacity:0.7;
+	z-index: 9999;
+}
+.con-play .tan{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -178px;
+  margin-left: -134px;
+  width: 270px;
+  height: 400px;
+  z-index: 99999;
+}
+.con-play .ok{
+	display:none;
+	background: url("../images/tanok.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.con-play .fos{
+	display:none;
+	background: url("../images/tanfls.png") no-repeat center;
+    background-size: 100% 100%;
+}
+.con-play .btn-share{
+	display: block;
+  width: 100px;
+  height: 40px;
+  background: url("../images/btnshare.png") no-repeat center;
+  background-size: 100% 100%;
+  margin-left: 146px;
+  margin-top: 337px;
+}
+.con-play .btn-play{
+	display: block;
+  width: 100px;
+  height: 40px;
+  background: url("../images/btnplay.png") no-repeat center;
+  background-size: 100% 100%;
+  margin-left: 20px;
+  margin-top: -40px;
+}
+.con-play .tanlovepao{
+	display: block;
+  width: 140px;
+  height: 140px;
+  border-radius: 70px;
+  position: absolute;
+  top: 22%;
+  left:23%;
+}
+.con-play .tanflspao{
+	display: block;
+  width: 170px;
+  height: 170px;
+  background: url("../images/konghidpao.png") no-repeat center;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.con-play .tantime{
+    position: absolute;
+  top: 22px;
+  left: 57px;
+  font-size: 60px;
+  color: #EA5984;
+}
+.con-play .sharetan{
+	display:none;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top:0;
+   left:0;
+   z-index: 99999999999;
+}
+
+
+
+/**兼容**/
+@media screen and (min-width: 374px) {
+   .con-choose .love-one {
+	  margin-top: -221px;
+	  margin-left: -74px;
+	}
+	.con-choose .love-two {
+	  margin-top: -59px;
+      margin-left: -171px;
+	}
+	.con-choose .love-three {
+	  margin-top: 55px;
+	  margin-left: 20px;
+	}
+	.con-choose .lp-cover {
+	  width: 160px;
+	  height: 160px;
+	  border-radius: 80px;
+	}
+	.con-choose .love-two {
+	  width: 190px;
+      height: 190px;
+      border-radius: 95px;
+	}
+	.con-choose .love-two a{
+	   border-radius:95px;
+	}
+	.con-choose .writepao{
+	   width: 170px;
+	  height: 170px;
+	  border-radius: 85px;
+	  margin-top: -5px;
+	  margin-left: -5px;
+	}
+	.con-choose .love-two span.writepao {
+	  width: 200px;
+	  height: 200px;
+	  border-radius: 100px;
+	}
+	
+}	
+
+/**动画效果*/
+.con-play .loveonefd{
+	animation: hidp0444 1s;
+	-moz-animation: hidp0444 1s;	
+	-webkit-animation: hidp0444 1s;	
+	-o-animation: hidp0444 1s;	
+	
+	animation-timing-function:linear;/**--速度相同--*/
+	-moz-animation-timing-function:linear;
+	-webkit-animation-timing-function:linear;
+	-o-animation-timing-function:linear;
+	
+	animation-iteration-count: infinite; /**定义动画的播放次数*/
+	-ms-animation-iteration-count: infinite; 
+	-moz-animation-iteration-count: infinite;   
+	-webkit-animation-iteration-count: infinite;  
+	-o-animation-iteration-count: infinite;  
+}
+
+@keyframes hidp01
+{
+0% {
+   margin-left: -73px;
+}
+
+100% {
+   margin-left: -75px;
+}
+
+}
+
+@-moz-keyframes hidp01 /* Firefox */
+{
+	0% {
+   margin-left: -73px;
+}
+
+100% {
+   margin-left: -75px;
+}
+}
+
+@-webkit-keyframes hidp01 /* Safari 和 Chrome */
+{
+0% {
+   margin-left: -73px;
+}
+
+100% {
+   margin-left: -75px;
+}
+
+	
+}
+
+@-o-keyframes hidp01 /* Opera */
+{
+	0% {
+   margin-left: -73px;
+}
+
+100% {
+   margin-left: -75px;
+}
+}
+
+
+/***22***/
+@keyframes hidp02
+{
+0% {
+  margin-left: -176px;
+}
+
+100% {
+  margin-left: -174px;
+}
+
+}
+
+@-moz-keyframes hidp02 /* Firefox */
+{
+	0% {
+  margin-left: -176px;
+}
+
+100% {
+  margin-left: -174px;
+}
+}
+
+@-webkit-keyframes hidp02 /* Safari 和 Chrome */
+{
+0% {
+  margin-left: -176px;
+}
+
+100% {
+  margin-left: -174px;
+}
+
+	
+}
+
+@-o-keyframes hidp02 /* Opera */
+{
+	0% {
+  margin-left: -176px;
+}
+
+100% {
+  margin-left: -174px;
+}
+}
+
+/**33**/
+@keyframes hidp03
+{
+0% {
+  margin-left: 17px;
+}
+
+100% {
+  margin-left: 15px;
+}
+
+}
+
+@-moz-keyframes hidp03 /* Firefox */
+{
+	0% {
+  margin-left: 17px;
+}
+
+100% {
+  margin-left: 15px;
+}
+}
+
+@-webkit-keyframes hidp03 /* Safari 和 Chrome */
+{
+0% {
+  margin-left: 17px;
+}
+
+100% {
+  margin-left: 15px;
+}
+
+	
+}
+
+@-o-keyframes hidp03 /* Opera */
+{
+	0% {
+  margin-left: 17px;
+}
+
+100% {
+  margin-left: 15px;
+}
+}

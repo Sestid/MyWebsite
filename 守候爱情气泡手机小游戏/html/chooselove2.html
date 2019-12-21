@@ -1,0 +1,161 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>泡泡</title>
+	<link href="../css/main.css" rel="stylesheet" type="text/css" />
+	<link href="../css/all.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <div class="con-choose">
+	    <img alt="" src="../images/decshow.jpg" width="100%"> 
+	    <div id="imgdiv1">
+	    </div>
+	    <div id="imgdiv2">
+	    </div>
+	    <div id="imgdiv3">
+	    </div>
+<!--	    <div class="love-one lp-cover">-->
+<!--	        <a href="javascript:void(0);">-->
+<!--	           <img alt="" src="../images/loveren01.png" width="90%"> -->
+<!--	           <span class="writepao"></span>-->
+<!--	        </a>-->
+<!--	    </div>-->
+<!--	    <div class="love-two lp-cover">-->
+<!--	        <a href="javascript:void(0);">-->
+<!--	           <img alt="" src="../images/loveren02.png" width="90%" style="margin-top: 10px;"> -->
+<!--	           <span class="writepao"></span>-->
+<!--	        </a>-->
+<!--	    </div>-->
+<!--	    <div class="love-three lp-cover">-->
+<!--	        <a href="javascript:void(0);">-->
+<!--	           <img alt="" src="../images/loveren03.png" width="90%"> -->
+<!--	           <span class="writepao"></span>-->
+<!--	        </a>-->
+<!--	    </div>-->
+	    
+    </div>
+</body>
+</html>
+<SCRIPT language=JavaScript>
+function playpage(){
+	window.location.href="play.html";
+}
+var $=function(obj){return typeof(obj)=="string"?document.getElementById(obj):obj;};
+onload=function(){
+        moveTo(0,0);focus();
+        resizeTo(2000,2000);
+        var d='';
+        w=0;
+        h=0;
+        x=[];
+        y=[];
+        mr=[];
+        xs=[];
+        ys=[];
+        fm=[];
+        fr=[];
+        fn=[];
+        var wr=0;
+        var hr=0;
+        imgn=3;
+        for(var i=0;i<imgn;i++){
+            	if(i==0){
+            		w=document.getElementById("imgdiv3").clientWidth;
+                    h=document.getElementById("imgdiv3").clientHeight;
+                }else if(i==1){
+                	w=document.getElementById("imgdiv3").clientWidth;
+                    h=document.getElementById("imgdiv3").clientHeight;
+                }else if(i==2){
+                	w=document.getElementById("imgdiv3").clientWidth;
+                    h=document.getElementById("imgdiv3").clientHeight;
+                }
+            	wr=w-100;
+                hr=h-100;
+                var xr=Math.round(Math.random()*wr);
+                var yr=Math.round(Math.random()*hr);
+                //alert(xr+"==="+yr);
+                mr[i]=Math.round(Math.random()*2*Math.PI);
+                xs[i]=Math.round(Math.random()*10+3);
+                ys[i]=Math.round(Math.random()*10+3);
+                //x[i]=xr;
+                //y[i]=yr;
+                fm[i]=500;
+                fr[i]=70;
+	            fn[i]=fr[i]*2;
+                if(i==0){
+                	x[i]=150;
+                	y[i]=100;
+                	d="<div onclick='playpage()' class='tanlovepao' id='img"+i+"' style='position:absolute;width:140px;height:140px; left:"+x[i]+"px;top:"+y[i]+"px;z-index:10;' ><img alt='' src='../images/loveren01.png' width='95%' > <span class='writepao'></span></div>";
+                	$("imgdiv1").innerHTML+=d;
+                }else if(i==1){
+                    x[i]=20;
+                	y[i]=250;
+                	d="<div onclick='playpage()' class='tanlovepao' id='img"+i+"' style='position:absolute;width:140px;height:140px; left:"+x[i]+"px;top:"+y[i]+"px;z-index:10;' ><img alt='' src='../images/loveren02.png' width='95%' > <span class='writepao'></span></div>";
+                	$("imgdiv2").innerHTML+=d;
+                }else if(i==2){
+                    x[i]=150;
+                	y[i]=340;
+                	d="<div onclick='playpage()' class='tanlovepao' id='img"+i+"' style='position:absolute;width:140px;height:140px; left:"+x[i]+"px;top:"+y[i]+"px;z-index:10;' ><img alt='' src='../images/loveren03.png' width='95%' > <span class='writepao'></span></div>";
+                	$("imgdiv3").innerHTML+=d;
+                }
+        }
+        runi=0;
+        runInterval();
+};
+function runInterval(){
+        $("img"+runi).src="1.jpg";
+        $("img"+runi).style.width =(fr[runi]*2)+"px";
+        $("img"+runi).style.height=(fr[runi]*2)+"px";
+        setInterval("runmove('"+runi+"');",fm[runi]);
+        runi++;
+        var timer=setTimeout("runInterval()",0);
+        if(runi>imgn-1){clearTimeout(timer);}
+}
+function runmove(n){
+        x[n]+=xs[n];
+        y[n]+=ys[n];
+        $("img"+n).style.left=x[n];
+        $("img"+n).style.top =y[n];
+        for(var i=0;i<imgn;i++){
+                if(i!=n){
+                        var RR=fr[n]+fr[i];
+                        if(Math.abs(x[n]+fr[n]-x[i]-fr[i])<RR){
+                                if(Math.abs(y[n]+fr[n]-y[i]-fr[i])<RR){
+                                        var dx=(x[n]-x[i]);
+                                        var dy=(y[n]-y[i]);
+                                        //var R=Math.sqrt(dx*dx+dy*dy);
+                                        var R=Math.sqrt((x[n]+fr[n]-x[i]-fr[i])*(x[n]+fr[n]-x[i]-fr[i])+(y[n]+fr[n]-y[i]-fr[i])*(y[n]+fr[n]-y[i]-fr[i]))
+                                        if(R<RR){
+                                                x[n]+=(RR-R)*dx/R;
+                                                y[n]+=(RR-R)*dy/R;
+                                                $("img"+n).style.left=x[n];
+                                                $("img"+n).style.top =y[n];
+                                                  if(dx==0){
+                                                        var dvx=0;
+                                                }else{
+                                                        var dvx=(fm[i]*(2*xs[i]*dx*dx+2*ys[i]*dx*dy)-fm[n]*(2*xs[n]*dx*dx+2*ys[n]*dy*dx))/(fm[n]+fm[i])/(dx*dx+dy*dy);
+                                                }
+                                                if(dy==0){
+                                                        var dvy=0;
+                                                }else{
+                                                        var dvy=(fm[i]*(2*xs[i]*dx*dy+2*ys[i]*dy*dy)-fm[n]*(2*xs[n]*dx*dy+2*ys[n]*dy*dy))/(fm[n]+fm[i])/(dx*dx+dy*dy);
+                                                }
+                                                xs[n]+=dvx;
+                                                ys[n]+=dvy;
+                                                xs[i]-=dvx;
+                                                ys[i]-=dvy;
+                                                break;
+                                        }
+                                }
+                        }
+                }
+        }
+        switch(true){
+                case ((x[n]<0&&xs[n]<0)||(x[n]+fn[n]>w&&xs[n]>0)):xs[n]*=-1;break;
+                case ((y[n]<0&&ys[n]<0)||(y[n]+fn[n]>h&&ys[n]>0)):ys[n]*=-1;break;
+        }
+}
+</SCRIPT>
