@@ -44,17 +44,13 @@ const password = document.getElementById('password');
 $('#submit').on('click', function(c){  
     if(username.value = 'shichunyu' && password.value  === '521shichunyu+'){
         window.location.href = '../My-web-resume/index.html'
-    }else{
+	}else if (username.value = 'shichunyu' && password.value  === '521liujianying+'){
+		window.location.href = '../守候爱情气泡手机小游戏/html/index.html'
+	}
+	else{
         alert('请联系首页微信获取账号！！！')
     }
 });
-$('#submit').on('click', function(c){  
-    if(username.value = 'shichunyu' && password.value  === '521liujianying+'){
-        window.location.href = '../守候爱情气泡手机小游戏/html/index.html'
-    }else{
-        alert('请联系首页微信获取账号！！！')
-    }
-})
 </script>
 <script src="js/login.js"></script>
 </html>
