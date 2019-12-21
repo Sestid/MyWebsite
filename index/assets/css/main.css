@@ -1200,6 +1200,10 @@
 			}
 
 			@media screen and (max-width: 736px) {
+				#banner {
+					min-height: 0;
+					padding: 2em 2em 2em 2em !important;
+				}
 
 				#banner h1 {
 					font-size: 3em;
