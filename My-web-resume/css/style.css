@@ -1368,7 +1368,7 @@ color: #F7EFE2;
 		max-height: 110px;
 	}
 	.education-class .current .list-content {
-		height: 130px;
+		height: 100%;
 	}
 	.mail-container {
 		max-width: 120%;
