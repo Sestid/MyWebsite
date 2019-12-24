@@ -37,6 +37,7 @@
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]--> 
 <script src="js/jquery.min.js"></script> <!-- JQUERY -->
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 </head>
 <body>
 
@@ -156,7 +157,7 @@
 								<ul class="skills-list no-padding">
 									<li>
 										<div class="fw-mid">Html（5）、Css（3）</div>
-										<span>包括：媒体查询media、弹性布局（Flex）、网格布局（Grid）、transform、animation等；</span>
+										<span>包括：媒体查询media、弹性布局（Flex）、transform、animation等；</span>
 									</li>
 									<li>
 										<div class="fw-mid">JavaScript、jQuery、Es6、EChart.js</div>
@@ -172,23 +173,24 @@
 										<div class="fw-mid">AntdDesignPro、AntdDesign、AntdDesignMobile、Material-UI</div>
 									</li>
 									<li>
-										<div class="fw-mid">了解TypeScript、Sass、Less</div>
-									</li>
-									<li>
-										<div class="fw-mid">Wxml、Wxss微信小程序开发</div>
-										<span><a target="_blank" href="https://github.com/xiaola66/applet-of-WeChat-">做过贝壳找房的页面（点击查看）</a></span>
-									</li>
-									<li>
-										<div class="fw-mid">熟悉Ajax、Axios</div>
-										<span>使用Ajax做过前后端交互的项目；</span>
+										<div class="fw-mid">熟练掌握Linux常用命令</div>
+										<span>会配置Nginx、能独立完成页面部署工作；</span>
 									</li>
 									<li>
 										<div class="fw-mid">熟练使用Git，有自己的github库；</div>
 									</li>
 									<li>
-										<div class="fw-mid">Nginx、MongoDB</div>
-										<span>会配置Nginx、会使用Robo3T或Studio3T连接MongoDB</span>
+										<div class="fw-mid">了解TypeScript、Sass、Less</div>
 									</li>
+									<li>
+										<div class="fw-mid">Wxml、Wxss微信小程序开发</div>
+										<span>做过贝壳找房的页面<a target="_blank" href="https://github.com/xiaola66/applet-of-WeChat-">（点击查看）</a></span>
+									</li>
+									<li>
+										<div class="fw-mid">熟悉Ajax、Axios</div>
+										<span>使用Ajax做过前后端交互的项目；</span>
+									</li>
+									
 									
 								</ul><!--SKILLS WITH BAR DISPLAY ENDS-->
 
@@ -375,14 +377,14 @@
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="map-container">
-									<div id="map" style="width:100%;height:325px;"></div><!--GOOGLE MAP-->
+									<div id="dituContent" style="width:100%;height:325px;"></div><!--GOOGLE MAP-->
 								</div>
 							</div>
 
 							<div class="col-sm-5">
 								<!--CONTACT DESCRIPTION-->
 								<h3 class="title">联系资料</h3>
-								<h6 class="sm-title"><span class="address-icon"><i class="fa fa-map-marker"></i></span>北京市昌平区龙兴园北区</h6>
+								<h6 class="sm-title"><span class="address-icon"><i class="fa fa-map-marker"></i></span>北京市昌平区</h6>
 								<h6 class="sm-title"><span class="address-icon"><i class="fa fa-phone"></i></span>15526548879</h6>
 								<h6 class="sm-title"><span class="address-icon"><i class="fa fa-envelope"></i></span>sestid@163.com</h6>
 								<!--/CONTACT DESCRIPTION ENDS-->
@@ -648,7 +650,95 @@
 =============================================================-->
 
 <script>
-	
+	  //创建和初始化地图函数：
+	  function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(116.308978,40.083542);//定义一个中心点坐标
+        map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+                        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"我的信息",content:"地址：北京市昌平区<br/>电话：15526548879<br/>邮箱：sestid@163.com",point:"116.308017|40.083721",isOpen:0,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
 </script>
 </html>
 </script>
