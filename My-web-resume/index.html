@@ -174,7 +174,7 @@
 									</li>
 									<li>
 										<div class="fw-mid">熟练掌握Linux常用命令</div>
-										<span>会配置Nginx、能独立完成页面部署工作；</span>
+										<span>会配置Nginx、能独立完成网站部署工作；</span>
 									</li>
 									<li>
 										<div class="fw-mid">熟练使用Git，有自己的github库；</div>
@@ -698,9 +698,12 @@
 			marker.setLabel(label);
             map.addOverlay(marker);
             label.setStyle({
-                        borderColor:"#808080",
-                        color:"#333",
-                        cursor:"pointer"
+				border:"2px solid green",
+				fontWeight:"600",
+				fontSize:"14px",
+				borderColor:"#808080",
+				color:"red",
+				cursor:"pointer",
             });
 			
 			(function(){
@@ -734,7 +737,7 @@
     }
     //创建一个Icon
     function createIcon(json){
-        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        var icon = new BMap.Icon("./images/dingwei.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
         return icon;
     }
     
