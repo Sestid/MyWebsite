@@ -860,6 +860,7 @@ ul.personal-info li {
 }
 .education-class .current .list-content{
 	height: 110px;
+	overflow-y: scroll;
 }
 .education-class .current i {
 	color: #111111;
