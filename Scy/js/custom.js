@@ -1,18 +1,6 @@
 
 (function ($) {
     "use strict";
-
-    $("#email").click(function () {
-        alert('网易邮箱：sestid@163.com');
-        alert('谷歌邮箱：shichunyu9@gmail.com');
-        alert('QQ邮箱：1432824214@qq.com');
-    });
-    $("#qq").click(function () {
-        alert('我的QQ是：1432824214');
-    });
-    $("#weixin").click(function () {
-        alert('我的微信是：woshishichunyuya');
-    });
     var mapLoaded = false,
         map;
     /*---------------Google Maps Scripts-------------------------*/

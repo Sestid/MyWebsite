@@ -290,7 +290,7 @@ strong {
 	color: #333;
 }
 
-span.year{color: #F9BF3B; float: right;}
+span.year{color: #F4D03F; float: right;}
 /*.......................................................*/
 
 /*---------Bootstrap Class Override-----------*/
@@ -800,7 +800,7 @@ ul.personal-info li {
 .employment-class li h4{
 	color: #F7EFE2;
 	font-size: 13px;
-	font-weight: 400;
+	font-weight: 800;
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
@@ -809,11 +809,16 @@ ul.personal-info li {
 	color: #f4d03f;
 	margin-top: 5px;
 	font-weight: bold;
+	text-align: right;
 }
 
 .employment-class li p{
 	margin: 0 0 10px;
 	font-size: 12px;
+}
+
+.employment-class li p a{
+	color: #F7EFE2;
 }
 
 .employment-class li:last-child:after{
@@ -1300,6 +1305,14 @@ color: #F7EFE2;
 	color: #f4d03f;
 }
 
+.donePart {
+	margin-left: 12px;
+}
+
+.desc {
+	margin-left: 24px;
+}
+
 /*-------------------------------------------------------*/
 	/* Responsive Fix for under 767px*/
 /*-------------------------------------------------------*/
@@ -1385,6 +1398,7 @@ color: #F7EFE2;
 	.mobile-social {
 		float: none;
 	}
+	.invert{color: #fff;font-size: 24px;margin-left: 20px;}
 }
 
 .iw_poi_title {color:#CC5522;font-size:16px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
