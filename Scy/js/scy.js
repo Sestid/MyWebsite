@@ -111,7 +111,7 @@
             "type": "photography",
             "imgSrc": "images/folio/platform.png",
             "name": "Veer后台管理系统（BI）",
-            "infoId": "#platform",
+            "infoId": "#platform1",
         },
         {
             "className": "view-tenth",
@@ -249,7 +249,7 @@
             "desc": "VCG、CFP网站数据管理",
         },
         {
-            "projectId": "platform",
+            "projectId": "platform1",
             "name": "Veer后台管理系统（BI）",
             "imgSrc": "images/folio/platform.png",
             "link": "https://platform.veer.com/",
